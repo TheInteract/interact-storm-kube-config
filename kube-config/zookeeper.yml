@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: zookeeper
+  labels:
+    name: zookeeper
+spec:
+  containers:
+    - name: zookeeper
+      image: zookeeper:latest
+      ports:
+        - containerPort: 2181
+      resources:
+        limits:
+          cpu: 100m
